@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 df = pd.read_csv("CENSUS_ED_ATTN.csv")
 
 # preprocess the dataset
-X = df.iloc[:, :-1].values
+X = df.iloc[:, :-2].values
 y = df.iloc[:, -1].values
 
 # split the dataset into training and testing sets
@@ -17,7 +17,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # build the neural network model
 model = Sequential()
-model.add(Dense(32, input_dim=15, activation='relu'))
+model.add(Dense(32, input_dim=14, activation='relu'))
 model.add(Dense(16, activation='relu'))
 model.add(Dense(1, activation='linear'))
 
