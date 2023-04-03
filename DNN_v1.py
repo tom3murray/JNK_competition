@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 df = pd.read_csv("CENSUS_ED_ATTN.csv")
 
 # preprocess the dataset
-X = df.iloc[:, :-2].values
+X = df.iloc[:, :-1].values
 y = df.iloc[:, -1].values
 
 # split the dataset into training and testing sets
